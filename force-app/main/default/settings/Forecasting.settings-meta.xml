@@ -228,6 +228,10 @@
             <label>Delivery/Installation Status</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NF9000008MWBE</field>
+            <label>Invoice Number</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NF9000007qCaQ</field>
             <label>Main Competitor(s)</label>
         </opportunityListFieldsLabelMappings>
@@ -283,6 +287,7 @@
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>00NF9000007qCaO</field>
             <field>00NF9000007qCaP</field>
+            <field>00NF9000008MWBE</field>
             <field>00NF9000007qCaQ</field>
             <field>00NF9000007qCaR</field>
             <field>00NF9000007qCaS</field>
@@ -440,6 +445,10 @@
             <label>Delivery/Installation Status</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NF9000008MWBE</field>
+            <label>Invoice Number</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NF9000007qCaQ</field>
             <label>Main Competitor(s)</label>
         </opportunityListFieldsLabelMappings>
@@ -495,6 +504,7 @@
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>00NF9000007qCaO</field>
             <field>00NF9000007qCaP</field>
+            <field>00NF9000008MWBE</field>
             <field>00NF9000007qCaQ</field>
             <field>00NF9000007qCaR</field>
             <field>00NF9000007qCaS</field>
@@ -656,6 +666,10 @@
             <label>Delivery/Installation Status</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NF9000008MWBE</field>
+            <label>Invoice Number</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NF9000007qCaQ</field>
             <label>Main Competitor(s)</label>
         </opportunityListFieldsLabelMappings>
@@ -712,6 +726,7 @@
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>00NF9000007qCaO</field>
             <field>00NF9000007qCaP</field>
+            <field>00NF9000008MWBE</field>
             <field>00NF9000007qCaQ</field>
             <field>00NF9000007qCaR</field>
             <field>00NF9000007qCaS</field>
@@ -869,6 +884,10 @@
             <label>Delivery/Installation Status</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NF9000008MWBE</field>
+            <label>Invoice Number</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NF9000007qCaQ</field>
             <label>Main Competitor(s)</label>
         </opportunityListFieldsLabelMappings>
@@ -924,6 +943,7 @@
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>00NF9000007qCaO</field>
             <field>00NF9000007qCaP</field>
+            <field>00NF9000008MWBE</field>
             <field>00NF9000007qCaQ</field>
             <field>00NF9000007qCaR</field>
             <field>00NF9000007qCaS</field>
@@ -1085,6 +1105,10 @@
             <label>Delivery/Installation Status</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NF9000008MWBE</field>
+            <label>Invoice Number</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NF9000007qCaQ</field>
             <label>Main Competitor(s)</label>
         </opportunityListFieldsLabelMappings>
@@ -1141,6 +1165,7 @@
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>00NF9000007qCaO</field>
             <field>00NF9000007qCaP</field>
+            <field>00NF9000008MWBE</field>
             <field>00NF9000007qCaQ</field>
             <field>00NF9000007qCaR</field>
             <field>00NF9000007qCaS</field>
@@ -1298,6 +1323,10 @@
             <label>Delivery/Installation Status</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NF9000008MWBE</field>
+            <label>Invoice Number</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NF9000007qCaQ</field>
             <label>Main Competitor(s)</label>
         </opportunityListFieldsLabelMappings>
@@ -1353,6 +1382,7 @@
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>00NF9000007qCaO</field>
             <field>00NF9000007qCaP</field>
+            <field>00NF9000008MWBE</field>
             <field>00NF9000007qCaQ</field>
             <field>00NF9000007qCaR</field>
             <field>00NF9000007qCaS</field>
@@ -1514,6 +1544,10 @@
             <label>Delivery/Installation Status</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NF9000008MWBE</field>
+            <label>Invoice Number</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NF9000007qCaQ</field>
             <label>Main Competitor(s)</label>
         </opportunityListFieldsLabelMappings>
@@ -1570,6 +1604,7 @@
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>00NF9000007qCaO</field>
             <field>00NF9000007qCaP</field>
+            <field>00NF9000008MWBE</field>
             <field>00NF9000007qCaQ</field>
             <field>00NF9000007qCaR</field>
             <field>00NF9000007qCaS</field>
@@ -1727,6 +1762,10 @@
             <label>Delivery/Installation Status</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NF9000008MWBE</field>
+            <label>Invoice Number</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NF9000007qCaQ</field>
             <label>Main Competitor(s)</label>
         </opportunityListFieldsLabelMappings>
@@ -1782,6 +1821,7 @@
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>00NF9000007qCaO</field>
             <field>00NF9000007qCaP</field>
+            <field>00NF9000008MWBE</field>
             <field>00NF9000007qCaQ</field>
             <field>00NF9000007qCaR</field>
             <field>00NF9000007qCaS</field>
@@ -1943,6 +1983,10 @@
             <label>Delivery/Installation Status</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NF9000008MWBE</field>
+            <label>Invoice Number</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NF9000007qCaQ</field>
             <label>Main Competitor(s)</label>
         </opportunityListFieldsLabelMappings>
@@ -1999,6 +2043,7 @@
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>00NF9000007qCaO</field>
             <field>00NF9000007qCaP</field>
+            <field>00NF9000008MWBE</field>
             <field>00NF9000007qCaQ</field>
             <field>00NF9000007qCaR</field>
             <field>00NF9000007qCaS</field>
@@ -2156,6 +2201,10 @@
             <label>Delivery/Installation Status</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NF9000008MWBE</field>
+            <label>Invoice Number</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NF9000007qCaQ</field>
             <label>Main Competitor(s)</label>
         </opportunityListFieldsLabelMappings>
@@ -2211,6 +2260,7 @@
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>00NF9000007qCaO</field>
             <field>00NF9000007qCaP</field>
+            <field>00NF9000008MWBE</field>
             <field>00NF9000007qCaQ</field>
             <field>00NF9000007qCaR</field>
             <field>00NF9000007qCaS</field>
@@ -2372,6 +2422,10 @@
             <label>Delivery/Installation Status</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NF9000008MWBE</field>
+            <label>Invoice Number</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NF9000007qCaQ</field>
             <label>Main Competitor(s)</label>
         </opportunityListFieldsLabelMappings>
@@ -2428,6 +2482,7 @@
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>00NF9000007qCaO</field>
             <field>00NF9000007qCaP</field>
+            <field>00NF9000008MWBE</field>
             <field>00NF9000007qCaQ</field>
             <field>00NF9000007qCaR</field>
             <field>00NF9000007qCaS</field>
@@ -2585,6 +2640,10 @@
             <label>Delivery/Installation Status</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NF9000008MWBE</field>
+            <label>Invoice Number</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NF9000007qCaQ</field>
             <label>Main Competitor(s)</label>
         </opportunityListFieldsLabelMappings>
@@ -2640,6 +2699,7 @@
             <field>OPPORTUNITY.LAST_UPDATE</field>
             <field>00NF9000007qCaO</field>
             <field>00NF9000007qCaP</field>
+            <field>00NF9000008MWBE</field>
             <field>00NF9000007qCaQ</field>
             <field>00NF9000007qCaR</field>
             <field>00NF9000007qCaS</field>

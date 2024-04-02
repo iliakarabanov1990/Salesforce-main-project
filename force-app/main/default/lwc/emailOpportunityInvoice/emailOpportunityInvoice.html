@@ -1,0 +1,54 @@
+<template> 
+    <article class="slds-card">     
+        <div class="slds-card__body slds-card__body_inner"> 
+            <div class="slds-form form slds-var-p-top_small"> 
+                
+                <div class="slds-grid slds-grid_pull-padded-medium">
+                    <div class="slds-col slds-p-horizontal_medium">
+                        <div class="slds-form-element">
+                            <label class="slds-form-element__label" for="recipient">Recipient</label>
+                            <div class="slds-form-element__control">
+                                <input id="recipient" type="text" value={recipientName} disabled="" class="slds-input"></input>
+                            </div>
+                        </div>   
+                    </div>
+                    <div class="slds-col slds-p-horizontal_medium">
+                        <div class="slds-form-element">
+                            <label class="slds-form-element__label" for="recipientEmail">To</label>
+                            <div class="slds-form-element__control">
+                                <input id="recipientEmail" type="email" value={recipientEmail} disabled="" class="slds-input"></input>
+                            </div>
+                        </div>   
+                    </div>
+                </div>
+        
+                <div class="slds-form-element">
+                    <label class="slds-form-element__label" for="subject">Subject</label>
+                    <div class="slds-form-element__control">
+                        <input id="subject" type="text" value={subject} disabled="" class="slds-input"></input>
+                    </div>
+                </div>
+
+                <div class="slds-form-element"> 
+                    <div class="slds-form-element__control slds-var-p-top_small"> 
+                        <lightning-input-rich-text value={body} onchange={handleBodyChange}></lightning-input-rich-text> 
+                    </div> 
+                </div> 
+            </div> 
+        </div>
+        
+        <div class="slds-grid slds-grid_align-end slds-var-p-around_x-small"> 
+            <div class="slds-col slds-var-p-right_x-small slds-var-p-bottom_x-small"> 
+                <lightning-button label="📎 Preview invoice" title="Preview invoice" onclick={navigateToFiles}></lightning-button> 
+            </div> 
+            <div class="slds-col slds-var-p-right_x-small slds-var-p-bottom_x-small"> 
+                <lightning-button 
+                    variant="brand" 
+                    label="✉️ Send" 
+                    title="Send" 
+                    onclick={handleSendEmail} 
+                ></lightning-button> 
+            </div> 
+        </div>
+    </article> 
+</template>

@@ -1,0 +1,346 @@
+<apex:page id="InvoiceFromOpportunity" controller="InvoiceFromOpportunityController" renderAs="pdf"
+           showHeader="false" sidebar="false" standardStylesheets="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0">
+    
+       	<head>
+           <style type="text/css">   
+                 @page {
+                    size: A4;
+                    margin: 127mm 2.3mm 50mm 2.3mm;
+                
+                    @top-center {
+                        content: element(header);
+                    }
+                
+                    @bottom-center {
+                        content: element(footer-center);
+                    }
+                }
+                
+                .header {
+                    position: running(header);
+                    margin-top: 21mm;
+                }
+                
+                .header .orange-box {
+                    height: 4.8mm;
+                }
+                
+                .footer-center {
+                    position: running(footer-center);
+                }
+                
+                .footer-center .orange-box {
+                    height: 4.2mm;
+                    padding-top: 1.5mm;
+                }
+                
+                
+                * {
+                    font-family: "SansSerif";
+                }
+                
+                
+                .company-box {
+                    height: 43mm;
+                    width: 100%;
+                    padding-top: 7.9mm;
+                }
+                
+                .company-box .company-box__row_big {
+                    height: 15mm;
+                    line-height: 2;
+                }
+                
+                .company-box__logo {
+                    width: 25.4mm;
+                    margin: -5mm 0 0 4.4mm;
+                }
+                
+                .company-box__col1 {
+                    width: 18%;
+                }
+                
+                .company-box__col2 {
+                    width: 60%;
+                    color: #333F4F;
+                }
+                
+                .company-box__col3 {
+                    width: 3%;
+                }
+                
+                .company-box__col4 {
+                    width: 16%;
+                }
+                
+                .company-box__col5 {
+                    width: 3%;
+                }
+                
+                .white-box {
+                    background-color: white;
+                }
+                
+                .grey-box {
+                    background-color: #f3f3f3;
+                }
+                
+                .orange-box {
+                    background-color: #ff5722;
+                    color: white;
+                    text-align: center;
+                }
+                
+                .center-align {
+                    text-align: center;
+                }
+                
+                .left-align {
+                    text-align: left;
+                }
+                
+                .right-align {
+                    text-align: right;
+                }
+                
+                .top-align {
+                    vertical-align: top;
+                }
+                
+                .middle-align {
+                    vertical-align: middle;
+                }
+                
+                .bottom-align {
+                    vertical-align: bottom;
+                }
+                
+                .underlining {
+                    border-bottom: solid 1px #AFAFAF;
+                }
+                
+                .bill-to>div {
+                    height: 4.5mm;
+                    margin-bottom: 1.5mm;
+                }
+                
+                .bill-wrapper {
+                    margin: 13mm 9mm 20mm 9mm;
+                }
+                
+                .main-wrapper {
+                    margin: 13mm 6mm 10mm 6mm;
+                }
+                
+                .product-table {
+                    width: 100%;
+                    -fs-table-paginate: paginate;
+                    border-collapse: collapse;
+                    border-spacing: 0;
+                }
+                
+                .product-table th,
+                .product-table td {
+                    border-left: .1px solid black;
+                    border-right: .1px solid black;
+                    word-wrap: break-word;
+                }
+                
+                .product-table thead th {
+                    border: 0;
+                }
+                
+                .product-table tr,
+                .product-table td {
+                    page-break-inside: avoid;
+                    height: 6mm;
+                    padding: 0 1mm 0 1mm;
+                    text-align: center;
+                }
+                
+                .product-table>tfoot td {
+                    border-top: .1px solid black;
+                    border-right: 0mm;
+                    border-left: 0mm;
+                    padding: 0 0 0 0;
+                    height: 9mm;
+                }
+                
+                .product-table__footer-cell {
+                    height: 100%;
+                    width: 100%;
+                    display: inline-block;
+                    padding-top: 3mm;
+                
+                }
+                
+                .product-table .orange-box {
+                    height: 3.5mm;
+                    padding-bottom: 0.5mm;
+                }
+                
+                .font-size-l-x {
+                    font-size: 6mm;
+                }
+                
+                .font-size-l {
+                    font-size: 4.5mm;
+                }
+                
+                .font-size-m {
+                    font-size: 4.1mm;	
+                }
+                
+                .font-size-m-x {
+                    font-size: 3.8mm; 	
+                }
+                
+                .font-size-m-xx {
+                    font-size: 3.4mm; 
+                }
+                
+                .font-size-s {
+                    font-size: 2.9mm; 
+                }
+                
+                .font-size-s-x {
+                    font-size: 2.8mm;
+                }
+                
+                .bold {
+                    font-weight: bold;
+                }
+                
+                .blue {
+                    color: #1F3864;
+                }
+                
+                .dark-blue {
+                    color: #333F4F;
+                }
+                
+                .dark-grey {
+                    color: #7F7F7F;
+                }
+    		</style>      	
+    	</head>          
+
+        <body>      
+            <div class="header">
+             	<div class="orange-box"> </div> 
+                
+                <table class="company-box grey-box">
+                    <tr>
+                        <td class="company-box__col1 middle-align" rowspan="3">   
+                            <img src="{!$Resource.companyLogo}" alt="Company Logo" class="company-box__logo"/>
+                        </td>
+                        <td class="company-box__col2 font-size-m-x">
+                            {!$Organization.Name}                     
+                        </td>
+                        <td class="company-box__col3"></td>
+                        	<td class="company-box__col4 center-align middle-align font-size-l-x dark-grey" rowspan="3">
+                                INVOICE                                                 
+                            </td>
+                        <td class="company-box__col5"></td>                      
+                    </tr>
+                    <tr>
+                        <td class="company-box__col2 font-size-s-x">  
+                            {!$Organization.Street}, {!$Organization.City}, {!$Organization.Country}, {!$Organization.PostalCode}
+                        </td>
+                        <td class="company-box__col3"></td>
+                        <td class="company-box__col5"></td>                        
+                    </tr>
+                    <tr>  
+                        <td class="company-box__col2 font-size-s-x"> 
+                            {!opportunity.Owner.Name}
+                        </td>
+                        <td class="company-box__col3"></td>
+                        <td class="company-box__col5"></td>
+                    </tr>             
+                    <tr class="bottom-align">  
+                        <td class="company-box__col1"></td>
+                        <td class="company-box__col2"></td>
+                        <td class="company-box__col3"></td>
+                        <td class="company-box__col4 center-align underlining font-size-s blue bold">
+                            <apex:outputText value="{0, date, MMMM d','  yyyy}">
+                                <apex:param value="{!NOW()}"/>
+                            </apex:outputText>
+                        </td>
+                        <td class="company-box__col5"></td>
+                    </tr>
+                    <tr class="company-box__row_big bottom-align">  
+                        <td class="company-box__col1"></td>
+                        <td class="company-box__col2"></td>
+                        <td class="company-box__col3"></td>
+                          <td class="company-box__col3 center-align underlining font-size-s blue bold">{!opportunity.Invoice_Number__c}</td>
+                        <td class="company-box__col5"></td>                      
+                    </tr>               
+                </table>   
+                
+                
+                <div class="bill-wrapper">
+                    <div class="bill-to">
+                        <div class="underlining font-size-s blue bold bottom-align">
+                             BILL TO   
+                        </div>
+                        <div class="font-size-m-xx">
+                            {!contact.Name}   
+                        </div>
+                        <div class="font-size-m-xx">
+                        	{!contact.Account.Name}   
+                        </div>
+                        <div class="font-size-m-xx">
+                          	{!contact.Phone}  
+                        </div>
+                        <div class="font-size-m-xx">
+                          	{!contact.Email}  
+                        </div>
+                    </div>
+               	</div>          
+            </div>
+            
+            <div class="footer-center" name="footer-center">
+            	<div class="orange-box font-size-m-xx">{!$Organization.Name}</div>
+            </div>
+            
+            <div class="main-wrapper">
+                <apex:dataTable value="{!products}" var="product" styleClass="product-table font-size-s"
+                                rowClasses="grey-box, white-box" headerClass="orange-box font-size-s">                  
+                    <apex:column style="width: 50%; text-align: left;">     
+                        <apex:facet name="header">PRODUCT NAME</apex:facet>
+                        <apex:outputText value="{!product.product2.Name}"/>
+                    </apex:column>                                     
+                    <apex:column style="width: 13%">
+                        <apex:facet name="header">QTY</apex:facet>
+                        <apex:outputText value="{0, number}">
+                              <apex:param value="{!product.Quantity}" />                       
+                        </apex:outputText>
+                    </apex:column>
+                    <apex:column style="width: 20%; text-align: right;">
+                        <apex:facet name="header">UNIT PRICE</apex:facet>
+                        <apex:outputText value="{0, number, 00.00}">
+                              <apex:param value="{!product.UnitPrice}" />                       
+                        </apex:outputText>
+                        <apex:facet name="footer">
+                            <apex:outputText value="Balance Due:" styleClass="font-size-m right-align dark-blue bold product-table__footer-cell"/>
+                        </apex:facet>
+                    </apex:column>
+                    <apex:column style="width: 17%; text-align: right;">
+                        <apex:facet name="header">TOTAL</apex:facet>
+                        <apex:outputText value="{0, number, 00.00}">
+                              <apex:param value="{!product.TotalPrice}" />                       
+                        </apex:outputText>
+                        <apex:facet name="footer">
+                            <apex:outputText value="{0, number, currency}" styleClass="font-size-l underlining bold product-table__footer-cell" style="background-color: #f4cccc; border-bottom: solid 1px #AFAFAF;">
+                              <apex:param value="{!opportunity.Amount}" />                       
+                            </apex:outputText>
+                        </apex:facet>
+                    </apex:column>
+                </apex:dataTable>    
+                
+            </div>
+            
+   		</body>
+
+    
+</apex:page>
