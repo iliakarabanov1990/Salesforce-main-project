@@ -25,18 +25,19 @@ export default class emailOpportunityInvoice extends NavigationMixin(LightningEl
     @wire(getEmailData, { recordId: '$recordId' })
     wiredFieldValue({ error, data }) {
         if (data) {
-            this.subject = data.subject;            
-            this.fileTitle = data.fileTitle;
-            this.fileId = data.fileId;
-            this.conVerId = data.conVerId;
-            this.recipientName = data.recipientName;
-            this.fromAddress = data.fromAddress;
-            this.recipientEmail =  data.recipientEmail;
-            this.recipientCompany = data.recipientCompany;
-            this.invoiceNumber = data.invoiceNumber;
-            this.orgName = data.orgName;
-            this.oppOwner = data.oppOwner;
-            this.body = data.body;
+            Object.assign(this, data);
+            // this.subject = data.subject;            
+            // this.fileTitle = data.fileTitle;
+            // this.fileId = data.fileId;
+            // this.conVerId = data.conVerId;
+            // this.recipientName = data.recipientName;
+            // this.fromAddress = data.fromAddress;
+            // this.recipientEmail =  data.recipientEmail;
+            // this.recipientCompany = data.recipientCompany;
+            // this.invoiceNumber = data.invoiceNumber;
+            // this.orgName = data.orgName;
+            // this.oppOwner = data.oppOwner;
+            // this.body = data.body;
 
         } else if (error) {
             this.showToast(error);
@@ -71,7 +72,7 @@ export default class emailOpportunityInvoice extends NavigationMixin(LightningEl
             })
             .catch(error => {
                 this.showToast('Error', 'Failed to send email', 'error');
-                console.error(error);
+                //console.error(error);
             });
     }
 

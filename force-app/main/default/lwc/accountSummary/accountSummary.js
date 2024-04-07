@@ -1,4 +1,4 @@
-import { LightningElement, track, wire, api } from 'lwc';
+import { LightningElement, api } from 'lwc';
 import getData from '@salesforce/apex/AccountSummaryController.getData';
 
 export default class AccountSummary extends LightningElement {
