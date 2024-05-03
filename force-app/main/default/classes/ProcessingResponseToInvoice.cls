@@ -8,8 +8,7 @@ public class ProcessingResponseToInvoice implements Messaging.InboundEmailHandle
         String body = email.plainTextBody.replace('>', '');
         body = body.replaceAll('\r\n|\n|\r', '');
         body = body.toLowerCase();
-        body = body.replace('word approved to confirm the order, or the word rejected to reject the order', '');
-        
+        body = body.replace('word approved to confirm the order, or the word rejected to reject the order', '');       
         
         Pattern patt = Pattern.compile('INV-\\d{6}');
         Matcher match = patt.matcher(subject);

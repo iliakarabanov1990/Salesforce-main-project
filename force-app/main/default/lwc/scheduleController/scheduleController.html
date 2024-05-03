@@ -1,0 +1,48 @@
+<template> 
+    <div class="slds-card">     
+
+        <div class="slds-card__header slds-card__header-title"> 
+            {batchClass}   
+        </div>
+
+        <div class="slds-card__body slds-card__body_inner">            
+            <div class="slds-form form slds-var-p-top_small">                   
+                <div>Here you can:</div> 
+                <div>1. Execute batch job once</div> 
+                <div>2. Set scheduler (CRON expression is required)</div>
+                <div class="slds-form-element">
+                    <label class="slds-form-element__label" for="cron">
+                        <span style="color: red; margin-right: 2px;">*</span>
+                        <span>CRON String!</span> 
+                        <lightning-icon size="xx-small" icon-name="utility:info" alternative-text="CRON image" title="Set CRON String to schedule batch" class="slds-var-m-left_x-small"></lightning-icon>
+                    </label>                            
+                    <div class="slds-form-element__control">
+                        <input id = "cron" type="text" value={cronString} onchange={handleCronChange} disabled={cronDisabled} class="slds-input"></input>
+                    </div>
+                </div>   
+                <a target="_blank" href="https://developer.salesforce.com/docs/atlas.en-us.salesforce_scheduler_developer_guide.meta/salesforce_scheduler_developer_guide/salesforce_scheduler_intro.htm"> Read more about scheduling</a>
+            </div> 
+        </div>
+        
+        <div class="slds-grid slds-grid_align-end slds-var-p-around_x-small"> 
+           
+            <div class="slds-col slds-var-p-right_x-small slds-var-p-bottom_x-small"> 
+                <lightning-button 
+                    variant="brand" 
+                    label="Run Once" 
+                    title="Send" 
+                    onclick={handleRunOnce} 
+                ></lightning-button> 
+            </div> 
+            <div class="slds-col slds-var-p-right_x-small slds-var-p-bottom_x-small"> 
+                <lightning-button 
+                    variant= {scheduleButtonVariant} 
+                    label= {scheduleButtonLabel}
+                    title="Send" 
+                    onclick={handleScheduleButton} 
+                ></lightning-button> 
+            </div>
+        </div>
+        
+    </div> 
+</template>

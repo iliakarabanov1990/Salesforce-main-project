@@ -20,7 +20,7 @@ public with sharing class SendEmailOppInvoiceController {
 
         OrgWideEmailAddress[] owea = [SELECT Address FROM OrgWideEmailAddress WHERE DisplayName = 'SalesDepartment'];
         if(owea.size() > 0){
-            result.put('fromAddress', owea[0].Address); 
+        	result.put('fromAddress', owea[0].Address); 
         }
        
         List<Opportunity> oppList = [SELECT Invoice_Number__c, Owner.Name FROM Opportunity WHERE Id = :recordId];

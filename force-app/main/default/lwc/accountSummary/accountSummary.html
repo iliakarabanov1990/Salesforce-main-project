@@ -43,15 +43,15 @@
         <template lwc:if={isTab}>
             <footer class="slds-p-horizontal_small slds-p-top_large">  
                 <div class="slds-grid slds-grid_align-spread slds-grid_vertical-align-center">               
-                    <div class="slds-col">
+                <div class="slds-col">
                         <p>Page {currentPage}</p>
                     </div>
                     <div class="slds-grid">
                     <div class="slds-col">
                         <lightning-button label="Previous" onclick={handlePrevious} disabled={disablePrevious}></lightning-button> 
                     </div>
-                    <div class="slds-col">
-                        <lightning-button label="Next" onclick={handleNext} disabled={disableNext}></lightning-button> 
+                        <div class="slds-col">
+                            <lightning-button label="Next" onclick={handleNext} disabled={disableNext}></lightning-button> 
                     </div>
                 </div>
                 </div>  

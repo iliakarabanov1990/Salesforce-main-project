@@ -240,6 +240,14 @@
             <label>Order Number</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NF9000008NxRJ</field>
+            <label>Payment Amount</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NF9000008NxiJ</field>
+            <label>Payment Status</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NF9000007qCaS</field>
             <label>Tracking Number</label>
         </opportunityListFieldsLabelMappings>
@@ -290,6 +298,8 @@
             <field>00NF9000008MWBE</field>
             <field>00NF9000007qCaQ</field>
             <field>00NF9000007qCaR</field>
+            <field>00NF9000008NxRJ</field>
+            <field>00NF9000008NxiJ</field>
             <field>00NF9000007qCaS</field>
             <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
             <field>OPPORTUNITY.PUSH_COUNT</field>
@@ -457,6 +467,14 @@
             <label>Order Number</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NF9000008NxRJ</field>
+            <label>Payment Amount</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NF9000008NxiJ</field>
+            <label>Payment Status</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NF9000007qCaS</field>
             <label>Tracking Number</label>
         </opportunityListFieldsLabelMappings>
@@ -507,6 +525,8 @@
             <field>00NF9000008MWBE</field>
             <field>00NF9000007qCaQ</field>
             <field>00NF9000007qCaR</field>
+            <field>00NF9000008NxRJ</field>
+            <field>00NF9000008NxiJ</field>
             <field>00NF9000007qCaS</field>
             <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
             <field>OPPORTUNITY.PUSH_COUNT</field>
@@ -678,6 +698,14 @@
             <label>Order Number</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NF9000008NxRJ</field>
+            <label>Payment Amount</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NF9000008NxiJ</field>
+            <label>Payment Status</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NF9000007qCaS</field>
             <label>Tracking Number</label>
         </opportunityListFieldsLabelMappings>
@@ -729,6 +757,8 @@
             <field>00NF9000008MWBE</field>
             <field>00NF9000007qCaQ</field>
             <field>00NF9000007qCaR</field>
+            <field>00NF9000008NxRJ</field>
+            <field>00NF9000008NxiJ</field>
             <field>00NF9000007qCaS</field>
             <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
             <field>OPPORTUNITY.PUSH_COUNT</field>
@@ -896,6 +926,14 @@
             <label>Order Number</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NF9000008NxRJ</field>
+            <label>Payment Amount</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NF9000008NxiJ</field>
+            <label>Payment Status</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NF9000007qCaS</field>
             <label>Tracking Number</label>
         </opportunityListFieldsLabelMappings>
@@ -946,6 +984,8 @@
             <field>00NF9000008MWBE</field>
             <field>00NF9000007qCaQ</field>
             <field>00NF9000007qCaR</field>
+            <field>00NF9000008NxRJ</field>
+            <field>00NF9000008NxiJ</field>
             <field>00NF9000007qCaS</field>
             <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
             <field>OPPORTUNITY.PUSH_COUNT</field>
@@ -1117,6 +1157,14 @@
             <label>Order Number</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NF9000008NxRJ</field>
+            <label>Payment Amount</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NF9000008NxiJ</field>
+            <label>Payment Status</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NF9000007qCaS</field>
             <label>Tracking Number</label>
         </opportunityListFieldsLabelMappings>
@@ -1168,6 +1216,8 @@
             <field>00NF9000008MWBE</field>
             <field>00NF9000007qCaQ</field>
             <field>00NF9000007qCaR</field>
+            <field>00NF9000008NxRJ</field>
+            <field>00NF9000008NxiJ</field>
             <field>00NF9000007qCaS</field>
             <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
             <field>OPPORTUNITY.PUSH_COUNT</field>
@@ -1335,6 +1385,14 @@
             <label>Order Number</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NF9000008NxRJ</field>
+            <label>Payment Amount</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NF9000008NxiJ</field>
+            <label>Payment Status</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NF9000007qCaS</field>
             <label>Tracking Number</label>
         </opportunityListFieldsLabelMappings>
@@ -1385,6 +1443,8 @@
             <field>00NF9000008MWBE</field>
             <field>00NF9000007qCaQ</field>
             <field>00NF9000007qCaR</field>
+            <field>00NF9000008NxRJ</field>
+            <field>00NF9000008NxiJ</field>
             <field>00NF9000007qCaS</field>
             <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
             <field>OPPORTUNITY.PUSH_COUNT</field>
@@ -1556,6 +1616,14 @@
             <label>Order Number</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NF9000008NxRJ</field>
+            <label>Payment Amount</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NF9000008NxiJ</field>
+            <label>Payment Status</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NF9000007qCaS</field>
             <label>Tracking Number</label>
         </opportunityListFieldsLabelMappings>
@@ -1607,6 +1675,8 @@
             <field>00NF9000008MWBE</field>
             <field>00NF9000007qCaQ</field>
             <field>00NF9000007qCaR</field>
+            <field>00NF9000008NxRJ</field>
+            <field>00NF9000008NxiJ</field>
             <field>00NF9000007qCaS</field>
             <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
             <field>OPPORTUNITY.PUSH_COUNT</field>
@@ -1774,6 +1844,14 @@
             <label>Order Number</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NF9000008NxRJ</field>
+            <label>Payment Amount</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NF9000008NxiJ</field>
+            <label>Payment Status</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NF9000007qCaS</field>
             <label>Tracking Number</label>
         </opportunityListFieldsLabelMappings>
@@ -1824,6 +1902,8 @@
             <field>00NF9000008MWBE</field>
             <field>00NF9000007qCaQ</field>
             <field>00NF9000007qCaR</field>
+            <field>00NF9000008NxRJ</field>
+            <field>00NF9000008NxiJ</field>
             <field>00NF9000007qCaS</field>
             <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
             <field>OPPORTUNITY.PUSH_COUNT</field>
@@ -1995,6 +2075,14 @@
             <label>Order Number</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NF9000008NxRJ</field>
+            <label>Payment Amount</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NF9000008NxiJ</field>
+            <label>Payment Status</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NF9000007qCaS</field>
             <label>Tracking Number</label>
         </opportunityListFieldsLabelMappings>
@@ -2046,6 +2134,8 @@
             <field>00NF9000008MWBE</field>
             <field>00NF9000007qCaQ</field>
             <field>00NF9000007qCaR</field>
+            <field>00NF9000008NxRJ</field>
+            <field>00NF9000008NxiJ</field>
             <field>00NF9000007qCaS</field>
             <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
             <field>OPPORTUNITY.PUSH_COUNT</field>
@@ -2213,6 +2303,14 @@
             <label>Order Number</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NF9000008NxRJ</field>
+            <label>Payment Amount</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NF9000008NxiJ</field>
+            <label>Payment Status</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NF9000007qCaS</field>
             <label>Tracking Number</label>
         </opportunityListFieldsLabelMappings>
@@ -2263,6 +2361,8 @@
             <field>00NF9000008MWBE</field>
             <field>00NF9000007qCaQ</field>
             <field>00NF9000007qCaR</field>
+            <field>00NF9000008NxRJ</field>
+            <field>00NF9000008NxiJ</field>
             <field>00NF9000007qCaS</field>
             <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
             <field>OPPORTUNITY.PUSH_COUNT</field>
@@ -2434,6 +2534,14 @@
             <label>Order Number</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NF9000008NxRJ</field>
+            <label>Payment Amount</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NF9000008NxiJ</field>
+            <label>Payment Status</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NF9000007qCaS</field>
             <label>Tracking Number</label>
         </opportunityListFieldsLabelMappings>
@@ -2485,6 +2593,8 @@
             <field>00NF9000008MWBE</field>
             <field>00NF9000007qCaQ</field>
             <field>00NF9000007qCaR</field>
+            <field>00NF9000008NxRJ</field>
+            <field>00NF9000008NxiJ</field>
             <field>00NF9000007qCaS</field>
             <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
             <field>OPPORTUNITY.PUSH_COUNT</field>
@@ -2652,6 +2762,14 @@
             <label>Order Number</label>
         </opportunityListFieldsLabelMappings>
         <opportunityListFieldsLabelMappings>
+            <field>00NF9000008NxRJ</field>
+            <label>Payment Amount</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
+            <field>00NF9000008NxiJ</field>
+            <label>Payment Status</label>
+        </opportunityListFieldsLabelMappings>
+        <opportunityListFieldsLabelMappings>
             <field>00NF9000007qCaS</field>
             <label>Tracking Number</label>
         </opportunityListFieldsLabelMappings>
@@ -2702,6 +2820,8 @@
             <field>00NF9000008MWBE</field>
             <field>00NF9000007qCaQ</field>
             <field>00NF9000007qCaR</field>
+            <field>00NF9000008NxRJ</field>
+            <field>00NF9000008NxiJ</field>
             <field>00NF9000007qCaS</field>
             <field>OPPORTUNITY.LAST_STAGE_CHANGE</field>
             <field>OPPORTUNITY.PUSH_COUNT</field>

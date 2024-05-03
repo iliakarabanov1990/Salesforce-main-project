@@ -4,12 +4,12 @@ public with sharing class AccountSummaryController {
     public static List<List<SObject>> getData(String recordId){
 
         List<String> queryArray = new List<String>{
-            'SELECT AccountId, Account.Name, Sum(Amount)',
+            'SELECT AccountId, Account.Name, SUM(Amount)',
             'FROM Opportunity',
             //'WHERE StageName = \'Closed Won\'' + (String.isEmpty(recordId) ? '' : ' AND AccountId = \'' + recordId + '\''),  
             'WHERE StageName = \'Closed Won\'' + (String.isEmpty(recordId) ? '' : ' AND AccountId = :recordId'),         
             'GROUP BY AccountId, Account.Name',
-            'HAVING Sum(Amount) > 0',
+            'HAVING SUM(Amount) > 0',
             'ORDER BY Account.Name'
         };
         List<SObject> accList = Database.query(String.join(queryArray, ' '));

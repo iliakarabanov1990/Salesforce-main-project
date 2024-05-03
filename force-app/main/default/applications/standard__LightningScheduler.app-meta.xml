@@ -22,5 +22,6 @@
     <tabs>standard-WorkType</tabs>
     <tabs>standard-OperatingHours</tabs>
     <tabs>standard-ServiceAppointment</tabs>
+    <tabs>Payment__c</tabs>
     <uiType>Lightning</uiType>
 </CustomApplication>
