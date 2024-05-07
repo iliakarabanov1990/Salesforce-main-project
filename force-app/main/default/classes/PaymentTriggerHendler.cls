@@ -2,25 +2,25 @@ public class PaymentTriggerHendler {
     
     public static void handleAfterInsert(Map<Id, Payment__c> payments){
         Set<Id> oppIds = PaymentTriggerHendler.getOppIdByPaymentsId(payments.keySet());
-        PaymentTriggerHendler.processPaymentChange(oppIds, 'Inserts');       
+        PaymentTriggerHendler.processPaymentChange(oppIds, true);       
     }
     
     public static void handleAfterUpdate(Map<Id, Payment__c> payments){
         Set<Id> oppIds = PaymentTriggerHendler.getOppIdByPaymentsId(payments.keySet());
-        PaymentTriggerHendler.processPaymentChange(oppIds, 'Update');       
+        PaymentTriggerHendler.processPaymentChange(oppIds, true);       
     }
     
     public static void handleAfterDelete(Map<Id, Payment__c> payments){
         Set<Id> oppIds = PaymentTriggerHendler.getOppIdByPayments(payments.values());
-        PaymentTriggerHendler.processPaymentChange(oppIds, 'Delete');       
+        PaymentTriggerHendler.processPaymentChange(oppIds, false);       
     }
     
     public static void handleAfterUndelete(Map<Id, Payment__c> payments){
         Set<Id> oppIds = PaymentTriggerHendler.getOppIdByPaymentsId(payments.keySet());
-        PaymentTriggerHendler.processPaymentChange(oppIds, 'Undelete');       
+        PaymentTriggerHendler.processPaymentChange(oppIds, true);       
     }
     
-    public static void processPaymentChange(Set<ID> oppSet, String Descr){
+    public static void processPaymentChange(Set<ID> oppSet, Boolean needTask){
          Map<ID, Opportunity> oppsForUpd = new Map<ID, Opportunity>(
            [SELECT 
             	Payment_Status__c, 
@@ -41,7 +41,7 @@ public class PaymentTriggerHendler {
             Opportunity opp = oppsForUpd.get((ID)oppSum.get('Opportunity__c'));
             Decimal oppSumAmount = (Decimal)oppSum.get('SumAmount');
             if(opp.Amount <= oppSumAmount){
-                if(opp.Payment_Status__c != 'Fully Paid'){
+                if(needTask && opp.Payment_Status__c != 'Fully Paid'){
                     opp.Payment_Status__c = 'Fully Paid';
                     Date remindDate = System.today().addDays(2);
                     Time remindTime = Time.newInstance(10, 0, 0, 0);
@@ -57,7 +57,7 @@ public class PaymentTriggerHendler {
                 opp.Payment_Status__c = 'Partially Paid'; 
             
             
-            opp.Description = Descr + ' oppAmount ' + opp.Amount +  'oppSumAmount ' + oppSumAmount;
+            //opp.Description = Descr + ' oppAmount ' + opp.Amount +  'oppSumAmount ' + oppSumAmount;
         }
         
         update oppsForUpd.values();

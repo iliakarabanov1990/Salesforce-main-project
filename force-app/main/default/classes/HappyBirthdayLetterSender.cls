@@ -18,15 +18,12 @@ public class HappyBirthdayLetterSender implements Database.Batchable<sObject>, D
    		List<Messaging.SingleEmailMessage> lstEmail = new List<Messaging.SingleEmailMessage>();
     
         for(Contact cont : ContactList){
+            if(String.isBlank(cont.Email))
+                continue;
             Messaging.SingleEmailMessage mail = new Messaging.SingleEmailMessage();
             mail.setTemplateId(emailTempl.Id);
             mail.setToAddresses(new List<String>{cont.Email});
-             mail.setTargetObjectId(cont.Id);
-            //mail.setSubject(et.subject);
-            //mail.setHTMLBody(et.Body);       
-            //mail.setWhatId(cont.Id);
-            //mail.setSaveAsActivity(false);
-            //mail.setUseSignature(false);
+            mail.setTargetObjectId(cont.Id);
             lstEmail.add(mail);
         }
            

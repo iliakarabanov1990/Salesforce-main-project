@@ -148,6 +148,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>HappyBirthdayLetterSenderTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>InvoiceFromOpportunityController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -160,6 +164,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>PaymentTriggerTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>ProcessingResponseToInvoice</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -168,7 +176,15 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>ScheduleHelperTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>ScheduledHappyBirthdayLetterSender</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>ScheduledHappyBirthdayLetterSenderTest</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
