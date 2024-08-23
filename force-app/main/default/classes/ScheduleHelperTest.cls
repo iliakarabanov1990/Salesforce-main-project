@@ -24,7 +24,7 @@ public class ScheduleHelperTest {
     static void testSetSchedulerByName(){
                       
         Test.startTest();
-        	ScheduleHelper.setSchedulerByName('ScheduledHappyBirthdayLetterSender', '0 0 23 * * ?');
+        	ScheduleHelper.setSchedulerByBatchName('ScheduledHappyBirthdayLetterSender', '0 0 23 * * ?');
         Test.stopTest();
     }
     

@@ -1,0 +1,218 @@
+<template>
+    <lightning-card>
+        <h3 slot="title">
+            <lightning-icon icon-name="standard:invocable_action" size="small" class="slds-m-right_medium"></lightning-icon>
+            Opportunity Manager
+            
+        </h3>
+        <header class="slds-page-header">
+            <div class="slds-grid">
+                <div class="slds-col">  
+                    <lightning-combobox
+                        name="Accesses"
+                        label="Accesses Level"
+                        placeholder="Accesses Level"
+                        options={picklistAccessesLevels}
+                        onchange={handleAccessesLevelChange}>
+                    </lightning-combobox>            
+                </div>
+
+
+                <div class="slds-col slds-grid slds-grid_align-end slds-m-top_large slds-gutters">   
+                    <div class="slds-col">  
+                        <lightning-button variant="brand" label="Assign To" title="Assign To" onclick={handleAssignTo}></lightning-button>         
+                    </div>
+                    <div class="slds-col">  
+                        <lightning-button variant="destructive" label="Delete Opportunity" title="Delete Opportunity" onclick={handleDeleteOpportunity}></lightning-button>            
+                    </div>                      
+                </div>
+
+                 
+            </div>
+        </header>
+        <div>
+            <lightning-datatable
+                data-id="oppTable"
+                key-field="Link"
+                data={displayedDataOpp}
+                columns={columns}>
+            </lightning-datatable>
+        </div>
+        <div class="slds-p-vertical_xx-small slds-p-horizontal_x-small slds-theme_shade">  
+            <div class="slds-grid slds-grid_align-spread slds-grid_vertical-align-center">               
+                <div class="slds-col">
+                    <p>Page {currentPageOpp}</p>
+                </div>
+                <div class="slds-grid">
+                    <div class="slds-col">
+                        <lightning-button label="Previous" onclick={handlePreviousOpp} disabled={disablePreviousOpp}></lightning-button> 
+                    </div>
+                    <div class="slds-col">
+                        <lightning-button label="Next" onclick={handleNextOpp} disabled={disableNextOpp}></lightning-button> 
+                    </div>
+                </div>
+            </div>  
+        </div>
+
+        <div class="slds-grid slds-gutters slds-border_top slds-p-top_medium slds-m-top_x-small">   
+            <div class="slds-col slds-size_3-of-5 slds-border_right">  
+                <div class="slds-grid">   
+                    <div class="slds-col slds-size_1-of-2 slds-border_right">
+                        <div class="slds-grid slds-grid_align-end slds-m-bottom_x-small">
+                            <lightning-button variant="brand" label="Set Undeleteable Accounts" onclick={handleOpenUndeleteableAcc}></lightning-button> 
+                        </div>
+                        <div>    
+                            <lightning-datatable
+                                data-id="accountTable"
+                                key-field="Id"
+                                data={displayedDataAcc}
+                                columns={accountColumns}
+                                hide-checkbox-column>
+                            </lightning-datatable>
+                        </div>
+                        <div class="slds-p-vertical_xx-small slds-p-horizontal_x-small slds-theme_shade">  
+                            <div class="slds-grid slds-grid_align-spread slds-grid_vertical-align-center">               
+                                <div class="slds-col">
+                                    <p>Page {currentPageAcc}</p>
+                                </div>
+                                <div class="slds-grid">
+                                    <div class="slds-col">
+                                        <lightning-button label="Previous" onclick={handlePreviousAcc} disabled={disablePreviousAcc}></lightning-button> 
+                                    </div>
+                                    <div class="slds-col">
+                                        <lightning-button label="Next" onclick={handleNextAcc} disabled={disableNextAcc}></lightning-button> 
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_1-of-2">
+                        <div class="slds-grid slds-grid_align-end slds-m-bottom_x-small">
+                            <lightning-button variant="brand" label="Set Undeleteable Contacts" onclick={handleOpenUndeleteableCont}></lightning-button>        
+                        </div>
+                        <div>
+                            <lightning-datatable
+                                data-id="contactTable"
+                                key-field="Id"
+                                data={displayedDataCont}
+                                columns={contactColumns}
+                                hide-checkbox-column>
+                            </lightning-datatable>
+                        </div>
+                        <div class="slds-p-vertical_xx-small slds-p-horizontal_x-small slds-theme_shade">  
+                            <div class="slds-grid slds-grid_align-spread slds-grid_vertical-align-center">               
+                                <div class="slds-col">
+                                    <p>Page {currentPageCont}</p>
+                                </div>
+                                <div class="slds-grid">
+                                    <div class="slds-col">
+                                        <lightning-button label="Previous" onclick={handlePreviousCont} disabled={disablePreviousCont}></lightning-button> 
+                                    </div>
+                                    <div class="slds-col">
+                                        <lightning-button label="Next" onclick={handleNextCont} disabled={disableNextCont}></lightning-button> 
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-col slds-size_2-of-5">  
+                <canvas id="pieChart"></canvas>    
+            </div>                      
+        </div> 
+    </lightning-card>
+
+    <template if:true={isModalOpen}>
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">            
+                <header class="slds-modal__header">
+                    <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={closeModal}>
+                        <lightning-icon icon-name="utility:close"
+                            alternative-text="close"
+                            variant="inverse"
+                            size="small" ></lightning-icon>
+                        <span class="slds-assistive-text">Close</span>
+                    </button>
+                </header>
+                <lightning-card>
+                    <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate slds-text-align_center">Select Users</h2>
+                    <div class="slds-p-vertical_x-small">
+                        <lightning-combobox
+                                name="Users"
+                                placeholder="Select User"
+                                options={picklistUsers}
+                                onchange={handleUserChange} >
+                        </lightning-combobox>   
+                    </div>
+                </lightning-card>       
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+
+    <template if:true={isModalAccOpen}>
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open slds-var-p-top_xx-large">
+            <div class="slds-modal__container">            
+                <header class="slds-modal__header">
+                    <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={closeAccModal}>
+                        <lightning-icon icon-name="utility:close"
+                            alternative-text="close"
+                            variant="inverse"
+                            size="small" ></lightning-icon>
+                        <span class="slds-assistive-text">Close</span>
+                    </button>
+                </header>
+                <lightning-card>
+                    <h2 id="modal-heading-acc" class="slds-text-heading_medium slds-hyphenate slds-text-align_center">Select Undeleteable Accounts</h2>
+                    <div style="height: 450px">
+                        <lightning-datatable
+                            data-id="accountChooseTable"
+                            key-field="Id"
+                            data={accounts}
+                            columns={accountColumns}
+                            selected-rows={preSelectedAccs}>
+                        </lightning-datatable>   
+                    </div>
+                    <div class="slds-grid slds-grid_align-end slds-p-vertical_x-small slds-p-horizontal_small slds-theme_shade">
+                        <lightning-button variant="brand" label="Set Undeleteable Accounts" onclick={handleSetUndeleteableAcc}></lightning-button> 
+                    </div>
+                </lightning-card>       
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+
+    <template if:true={isModalContOpen}>
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open slds-var-p-top_xx-large">
+            <div class="slds-modal__container">            
+                <header class="slds-modal__header">
+                    <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={closeContModal}>
+                        <lightning-icon icon-name="utility:close"
+                            alternative-text="close"
+                            variant="inverse"
+                            size="small" ></lightning-icon>
+                        <span class="slds-assistive-text">Close</span>
+                    </button>
+                </header>
+                <lightning-card>
+                    <h2 id="modal-heading-cont" class="slds-text-heading_medium slds-hyphenate slds-text-align_center">Select Undeleteable Contacts</h2>
+                    <div style="height: 450px">
+                        <lightning-datatable
+                            data-id="contactChooseTable"
+                            key-field="Id"
+                            data={contacts}
+                            columns={contactColumns}
+                            selected-rows={preSelectedConts}>
+                        </lightning-datatable>   
+                    </div>
+                    <div class="slds-grid slds-grid_align-end slds-p-vertical_x-small slds-p-horizontal_small slds-theme_shade">
+                        <lightning-button  variant="brand" label="Set Undeleteable Contacts" onclick={handleSetUndeleteableCont}></lightning-button> 
+                    </div>
+                </lightning-card>       
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+
+</template>

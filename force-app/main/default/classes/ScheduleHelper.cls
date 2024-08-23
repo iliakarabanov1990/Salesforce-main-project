@@ -14,16 +14,17 @@ public class ScheduleHelper {
     }
     
 	@AuraEnabled
-	public static Id setSchedulerByName(String className, String Cron){
+	public static Id setSchedulerByBatchName(String className, String cron){
     	
 		Id batchJobId;    
-        Type classType = Type.forName(className);
+        /*Type classType = Type.forName(className);
          
         if (classType != null){
             batchJobId = System.Schedule(className, Cron, (Schedulable)classType.newInstance());
-        }
-        
-        return batchJobId;
+        }*/        
+
+        UniversalScheduler unSched = new UniversalScheduler(className);
+        return System.Schedule(className, cron, unSched);
     }
     
     @AuraEnabled(cacheable=true)

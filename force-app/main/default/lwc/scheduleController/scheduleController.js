@@ -1,6 +1,6 @@
 import { LightningElement, api, wire } from 'lwc';
 import executeBatchByName from '@salesforce/apex/ScheduleHelper.executeBatchByName';
-import setSchedulerByName from '@salesforce/apex/ScheduleHelper.setSchedulerByName';
+import setSchedulerByBatchName from '@salesforce/apex/ScheduleHelper.setSchedulerByBatchName';
 import getDataSchedulerByName from '@salesforce/apex/ScheduleHelper.getDataSchedulerByName';
 import getDataSchedulerById from '@salesforce/apex/ScheduleHelper.getDataSchedulerById';
 import abortJob from '@salesforce/apex/ScheduleHelper.abortJob';
@@ -8,7 +8,7 @@ import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 
 export default class ScheduleController extends LightningElement {
 
-    @api schedulerClass;
+    //@api schedulerClass;
     @api batchClass;
     
     title = '';
@@ -23,7 +23,7 @@ export default class ScheduleController extends LightningElement {
     schedulerTimesTriggered;
     schedulerNextFireTime;
 
-    @wire(getDataSchedulerByName, { schedulerName: '$schedulerClass' })
+    @wire(getDataSchedulerByName, { schedulerName: '$batchClass' })
     wiredGetDataSchedulerByName({ error, data }) {
         if (data)
             this.fillSchedulerData(data);
@@ -62,11 +62,14 @@ export default class ScheduleController extends LightningElement {
     }
 
     setScheduler(){
-        setSchedulerByName({ className: this.schedulerClass, Cron: this.cronString}) 
+        setSchedulerByBatchName({ schedulerName: this.batchClass, className: this.batchClass, cron: this.cronString}) 
             .then(data => this.schedulerId = data)
             .then(() => getDataSchedulerById({schedulerId: this.schedulerId}))
             .then(data => this.fillSchedulerData(data))
-            .catch(error => this.showToast('Error', JSON.stringify(error), 'error'));       
+            .catch(error => {
+                this.showToast('Error', JSON.stringify(error), 'error');
+                console.log(error);
+            });       
     }
 
     abortScheduler(event){
